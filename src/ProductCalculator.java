@@ -9,7 +9,7 @@ public class ProductCalculator {
 	 * Recursively multiply elements of an Integer ArrayList and return the result.
 	 *  Made private because it should be called using a copy of the original ArrayList.
 	 * @param inputNums
-	 * @return the product of the ArrayList's elements
+	 * @return the product of the ArrayList's elements as a Long integer
 	 */
 	private static long getProductRecursive(ArrayList<Integer> inputNums) {
 		// The counter variable keeps track of the recursion count and is used as a base case to exit recursion
@@ -33,7 +33,7 @@ public class ProductCalculator {
 	 *  original list.  This is a safer approach since there could be scenarios where the original object may be needed elsewhere.
 	 * 
 	 * @param inputNums
-	 * @return the result of the recursive method
+	 * @return the result of the recursive method as a Long integer
 	 */
 	public static long getProduct(ArrayList<Integer> inputNums) {
 		ArrayList<Integer> inputCopy = new ArrayList<Integer>(inputNums);
