@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 
+/**
+ * Provides a recursive method to return the product of an ArrayList of integers
+ */
 public class ProductCalculator {
 	
 	public static int getProduct(ArrayList<Integer> inputNums) {
+		// The counter variable keeps track of the recursion count and is used as a base case to exit recursion
 		int counter = inputNums.size() - 1;
 		int currentValue = inputNums.get(counter);	
 		
