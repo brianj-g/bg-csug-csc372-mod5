@@ -21,7 +21,11 @@ public class ProductCalculator {
 	 * @param listSize the size of the ArrayList
 	 * @return the product of the ArrayList's elements as a Long integer
 	 */
-	public static long getProduct(ArrayList<Integer> inputNums, int listSize) {		
+	public static long getProduct(ArrayList<Integer> inputNums, int listSize) {
+		// Validate that the listSize value is not greater than the size of the ArrayList
+		if (listSize > inputNums.size()) {
+			throw new IllegalArgumentException("Error: List size parameter exceeds the length of the ArrayList");
+		}
 		// Base case: Return 1 when the size of the ArrayList has been reached.
 		//  The return value of 1 is multiplied by the result of the previous recursion, thus returning the value of that instance.
 		if (listSize == 0) {

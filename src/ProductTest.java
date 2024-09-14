@@ -63,7 +63,12 @@ public class ProductTest {
 		} while (inputNumbers.size() != entryMax);
 		
 		// Call the getProduct() method to recursively multiply the numbers
-		System.out.println("The product is: " + ProductCalculator.getProduct(inputNumbers, entryMax));	
+		try {
+			System.out.println("The product is: " + ProductCalculator.getProduct(inputNumbers, inputNumbers.size()));	
+		} catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
+
 		
 		s.close();
 	}
