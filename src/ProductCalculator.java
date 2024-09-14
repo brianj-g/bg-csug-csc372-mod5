@@ -5,7 +5,13 @@ import java.util.ArrayList;
  */
 public class ProductCalculator {
 	
-	public static int getProduct(ArrayList<Integer> inputNums) {
+	/**
+	 * Recursively multiply elements of an Integer ArrayList and return the result.
+	 *  Made private because it should be called using a copy of the original ArrayList.
+	 * @param inputNums
+	 * @return the product of the ArrayList's elements
+	 */
+	private static long getProductRecursive(ArrayList<Integer> inputNums) {
 		// The counter variable keeps track of the recursion count and is used as a base case to exit recursion
 		int counter = inputNums.size() - 1;
 		int currentValue = inputNums.get(counter);	
@@ -14,10 +20,23 @@ public class ProductCalculator {
 		if (counter == 0) {
 			return currentValue;
 		}
-		// Recursive case: Call getProduct with the value of currentValue and the current counter
+		// Recursive case: Multiply the currentValue with the result of getProduct(inputNums)
+		// Also removes the last element of the ArrayList, which effectively decrements the counter variable
 		else {
-			inputNums.removeLast();
+			inputNums.remove(counter);
 			return currentValue * getProduct(inputNums);
 		}
+	}
+	
+	/**
+	 * The public method creates a copy of the ArrayList and passes it into the recursive method to avoid modifying the user's
+	 *  original list.  This is a safer approach since there could be scenarios where the original object may be needed elsewhere.
+	 * 
+	 * @param inputNums
+	 * @return the result of the recursive method
+	 */
+	public static long getProduct(ArrayList<Integer> inputNums) {
+		ArrayList<Integer> inputCopy = new ArrayList<Integer>(inputNums);
+		return getProductRecursive(inputCopy);
 	}
 }
