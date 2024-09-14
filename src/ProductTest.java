@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Test class to prove functionality of the getProduct() and getProductRecursive() methods
+ */
 public class ProductTest {
 	
 	/**

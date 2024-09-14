@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Provides a recursive method to return the product of an ArrayList of integers
+ * Provides a recursive method to return the product of an ArrayList of integers.
  */
 public class ProductCalculator {
 	
