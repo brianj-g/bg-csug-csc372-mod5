@@ -1,3 +1,15 @@
+/*
+ * 
+ * Module 5 CTA Option 1: Implementing Recursion to Provide a Product
+ * Brian Gunther
+ * CSC372: Programming II
+ * Colorado State University Global
+ * Dr. Vanessa Cooper
+ * September 15, 2024
+ * 
+ */
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -52,7 +64,7 @@ public class ProductTest {
 		} while (inputNumbers.size() != entryMax);
 		
 		// Call the getProduct() method to recursively multiply the numbers
-		System.out.println("The product is: " + ProductCalculator.getProduct(inputNumbers));	
+		System.out.println("The product is: " + ProductCalculator.getProduct(inputNumbers, entryMax));	
 		
 		s.close();
 	}
