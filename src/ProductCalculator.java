@@ -1,5 +1,4 @@
 /*
- * 
  * Module 5 CTA Option 1: Implementing Recursion to Provide a Product
  * Brian Gunther
  * CSC372: Programming II
