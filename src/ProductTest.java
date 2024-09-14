@@ -19,7 +19,7 @@ public class ProductTest {
 	            int currentNum = Integer.parseInt(splitString[i]);
 	            numString.add(currentNum);
 	        } catch (NumberFormatException e) {
-	            System.out.println(splitString[i] + " is not an Integer.");
+	            System.out.println("\"" + splitString[i] + "\"" + " is not an Integer.");
 	        }
 		}
 		
@@ -45,7 +45,7 @@ public class ProductTest {
 			inputNumbers = parseString(entryString);
 			
 			if (inputNumbers.size() != entryMax) {
-				System.out.println("Your input was invalid and did not return " + entryMax + " integers. Please try again.");
+				System.out.println("Your input was invalid and did not return exactly " + entryMax + " integers. Please try again.");
 			}
 		} while (inputNumbers.size() != entryMax);
 		
