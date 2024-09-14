@@ -23,7 +23,7 @@ public class ProductCalculator {
 	 * @return the product of the ArrayList's elements as a Long integer
 	 */
 	public static long getProduct(ArrayList<Integer> inputNums, int listSize) {		
-		// Base case: Return the currentValue when the size of the ArrayList has been reached.
+		// Base case: Return 1 when the size of the ArrayList has been reached.
 		//  The return value of 1 is multiplied by the result of the previous recursion, thus returning the value of that instance.
 		if (listSize == 0) {
 			return 1;
